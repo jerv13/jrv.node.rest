@@ -1,5 +1,5 @@
 {
-  "name": "jrv_nodeREST",
+  "name": "jrv_node_rest",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
