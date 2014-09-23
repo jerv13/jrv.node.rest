@@ -61,7 +61,6 @@ var RouteService = function() {
         }
 
         return route;
-
     };
 
     self.buildRoutes = function(server) {

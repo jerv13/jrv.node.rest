@@ -4,11 +4,14 @@
   "private": true,
   "dependencies": {
     "restify": "~2.6",
+    "mysql": "~2.5",
     "bunyan": "~0.22",
-    "mongodb": "~1.4",
-    "mongoose": "~3.8.1",
+    "googleapis": "~1"
+  },
+  "OLD": {
     "restify-oauth2": "~2.1",
     "redis": "~0.9",
-    "googleapis": "~1"
+    "mongodb": "~1.4",
+    "mongoose": "~3.8.1"
   }
 }
