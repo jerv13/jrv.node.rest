@@ -4,10 +4,10 @@
 var config = {
     _db: {
         mongo: {
-            connect: 'mongodb://localhost/leagueman'
+            connect: 'mongodb://localhost/test'
         },
         redis: {
-            host: '192.168.0.210',
+            host: '120.0.0.1',
             port: 6379
         },
         mysql: {}
