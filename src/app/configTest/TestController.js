@@ -11,7 +11,7 @@ var TestController = function() {
         var tRes = new GenResponse();
         tRes.code = 200;
         tRes.message = 'GET OK';
-        tRes.data = configService.getModuleConfig('');
+        tRes.data = configService.getModuleConfig('_db');
         res.send(tRes);
         
         return next();

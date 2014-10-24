@@ -10,13 +10,13 @@ var RouteService = function() {
     self.buildRoutesFromConfig = function(configService) {
 
         // parse module folders
-        var files = fs.readdirSync(configService.modulePath);
+        var files = fs.readdirSync(configService.MODULE_PATH);
         
         for (var i in files) {
             
             if (!files.hasOwnProperty(i))
                 continue;
-            var name = configService.modulePath + '/' + files[i];
+            var name = configService.MODULE_PATH + '/' + files[i];
             
             if (fs.statSync(name).isDirectory()) {
                 

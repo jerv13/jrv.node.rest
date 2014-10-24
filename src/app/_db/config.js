@@ -2,7 +2,7 @@
  * _core config
  */
 var config = {
-    db: {
+    _db: {
         mongo: {
             connect: 'mongodb://localhost/leagueman'
         },

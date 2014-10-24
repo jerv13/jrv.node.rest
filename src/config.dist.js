@@ -47,11 +47,7 @@ var config = {
         format: "yyyy-mm-dd'T'HH:MM:ss'Z'"
     },
     module: {
-        _db: {
-            mongo: {
-                connect: 'POOOOOOOOO'
-            }
-        }
+        
     }
 };
 

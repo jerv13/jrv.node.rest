@@ -1,13 +1,14 @@
 var configService = require('./configService.js');
 var routeService = require('./routeService.js');
 
-var appConfig = configService.getModuleConfig('');
+var serverConfig = configService.getConfig('server');
+var logConfig = configService.getConfig('log');
 var restify = require('restify');
 var Logger = require('bunyan');
 
 var log = new Logger({
-  name: appConfig.server.name,
-  streams: appConfig.log.streams,
+  name: serverConfig.name,
+  streams: logConfig.streams,
   serializers: {
     req: Logger.stdSerializers.req,
     res: Logger.stdSerializers.res
@@ -19,9 +20,9 @@ var serverOptions = {
     //key: '',
     //formatters: {},
     log: log,
-    name: appConfig.server.name,
+    name: serverConfig.name,
     //spdy: {},
-    version: appConfig.server.version
+    version: serverConfig.version
     //responseTimeHeader: ''
     //responseTimeFormatter: {}
 };
@@ -37,6 +38,6 @@ server.pre(function (request, response, next) {
 routeService.buildRoutesFromConfig(configService);
 routeService.buildRoutes(server);
 
-server.listen(appConfig.server.port, appConfig.server.host, function() {
+server.listen(serverConfig.port, serverConfig.host, function() {
     console.log('%s listening at %s ', server.name, server.url);
 });
